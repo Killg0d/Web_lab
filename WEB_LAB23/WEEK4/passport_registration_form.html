@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>User Registration</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="container">
+		<h2>User Registration</h2>
+		<span class="float-right f-10">Fields marked with asterisk (*) are mandatory</span>
+		<span><b>Important Information:</b> Passport application can be processed at any PSK/POPSK/PSLK WITHIN INDIA
+			irrespective of your residential address.</span>
+		<ul type="square">
+			<li>Click here to check the appointment availability at all PSK/POPSK/PSLK.</li>
+			<li>Click here to know more about Apply Anywhere in India scheme for Passport Services.</li>
+		</ul>
+		<form action="" method="">
+			<table>
+				<tr>
+					<td rowspan="2" class="v-align">Register to apply at<span class="mandatory"> *</span></td>
+					<td>
+						<input type="radio" name="Location" id="delhi" value="13"><label for="delhi"> Delhi</label>
+
+					</td>
+					<td rowspan="2" class="v-align"><span class="f-10">Select the 'CPV Delhi' option to apply for Diplomatic/Official
+							passport at Consular, Passport and Visa (CPV) division, Delhi.</span></td>
+				</tr>
+				<tr>
+					<td><input type="radio" name="Location" id="LocationPO" checked="checked" value="PO"><label
+							for="LocationPO"> Passport Office</label></td>
+				</tr>
+				<tr>
+					<td><label for=""> Passport Office <span class="mandatory">*</span><br><span class="f-10">(As per
+								Present Residential Address)</span></label></td>
+					<td><select name="dcdrLocation" id="dcdrLocation">
+							<option value="">----- Select -----</option>
+							<option value="1">Ahmedabad</option>
+							<option value="2">Amritsar</option>
+							<option value="4">Bareilly</option>
+							<option value="5">Bengaluru</option>
+							<option value="7">Bhopal</option>
+							<option value="3">Bhubaneswar</option>
+							<option value="10">Chandigarh</option>
+							<option value="26">Chennai</option>
+							<option value="11">Cochin</option>
+							<option value="9">Coimbatore</option>
+							<option value="14">Dehradun</option>
+							<option value="15">Delhi</option>
+							<option value="18">Ghaziabad</option>
+							<option value="16">Goa</option>
+							<option value="17">Guwahati</option>
+							<option value="19">Hyderabad</option>
+							<option value="23">Jaipur</option>
+							<option value="21">Jalandhar</option>
+							<option value="22">Jammu</option>
+							<option value="8">Kolkata</option>
+							<option value="24">Kozhikode</option>
+							<option value="25">Lucknow</option>
+							<option value="27">Madurai</option>
+							<option value="6">Mumbai</option>
+							<option value="29">Nagpur</option>
+							<option value="30">Patna</option>
+							<option value="31">Pune</option>
+							<option value="33">Raipur</option>
+							<option value="32">Ranchi</option>
+							<option value="35">Shimla</option>
+							<option value="34">Srinagar</option>
+							<option value="36">Surat</option>
+							<option value="38">Tiruchirappalli</option>
+							<option value="39">Trivandrum</option>
+							<option value="321">Vijayawada</option>
+							<option value="40">Visakhapatnam</option>
+
+
+						</select></td>
+					<td><span class="f-10">Tibetan Refugees applying for Identity Certificate must register with 'Delhi'
+							Passport Office.</span></td>
+				</tr>
+				<tr>
+					<td><label for="gname"> Given Name <span class="f-10"> (Max 45 Characters)</span><span
+								class="mandatory">*</span><br>
+						</label></td>
+					<td><input type="text" name="gname" id="gname"></td>
+					<td><span class="f-10">First Name + Middle Name
+							Initials and honorifics (e.g. Dr.,Col.,etc.) are not allowed.</span></td>
+				</tr>
+				<tr>
+					<td><label for="sname"> Surname Name <span class="f-10"> (Max 45 Characters)</span><br>
+						</label></td>
+					<td><input type="text" name="sname" id="sname"></td>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><label for="dob">Date of Birth (DD/MM/YYYY)<span class="mandatory">*</span><br>
+						</label></td>
+					<td><input type="date" name="dob" id="dob"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><label for="email">E-mail Id <span class="f-10"> (Max 35 Characters)</span><span
+								class="mandatory">*</span><br>
+						</label></td>
+					<td><input type="email" name="email" id="email"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><label for="email_login">Do you want your Login Id
+							to be same as E-mail Id?
+						</label></td>
+					<td><input type="radio" name="email_login" id="email_login"><label
+							for="email_login">Yes</label><input type="radio" name="email_login" id="email_login"
+							checked><label for="email_login">No</label></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><label for="lid">Login Id <span class="mandatory">*</span><br>
+						</label></td>
+					<td><input type="text" name="lid" id="lid"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><label for="password">Password <span class="mandatory">*</span><br>
+						</label></td>
+					<td><input type="text" name="password" id="password"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><label for="cpassword">Confirm Password <span class="mandatory">*</span><br>
+						</label></td>
+					<td><input type="text" name="cpassword" id="cpassword"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><label for="hintQues">Hint Question <span class="mandatory">*</span><br>
+						</label></td>
+					<td><select name="hintQues" id="hintQues">
+							<option value="">----- Select -----</option>
+							<option value="Birth City">Birth City</option>
+							<option value="Colour">Favourite Colour</option>
+							<option value="Favourite Cricketer">Favourite Cricketer</option>
+							<option value="Favourite Food">Favourite Food</option>
+							<option value="First School">First School</option>
+							<option value="Make of First car Owned">Make of First car Owned</option>
+							<option value="Mother's Maiden Name">Mother's Maiden Name</option>
+
+						</select></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><label for="hintAns">Hint Answer <span class="mandatory">*</span><br>
+						</label></td>
+					<td><input type="text" name="hintAns" id="hintAns"></td>
+					<td></td>
+				</tr>
+				<tr>
+                    <td rowspan="2" >Enter characters Displayed<sup>*</sup></td>
+                    <td rowspan="2"><img src="img/captcha.jpg"></td>
+                    <td><button id=refresh></button></td>
+                </tr>
+                <tr>
+                    <td><button id=sp2></button></td>
+                    
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="text" required>
+                </tr>
+
+
+
+
+			</table>
+			<div class="justify-sb">
+			<input type="submit" value="Register" class="button">
+			<input type="reset" value="Clear"  class="button">
+		</div>
+		</form>
+	</div>
+</body>
+
+</html>

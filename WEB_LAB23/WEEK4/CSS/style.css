@@ -1,0 +1,59 @@
+.float-right{
+	float:right;
+}
+span.mandatory{
+	color: #ff0000;
+}
+.f-10{
+	font-size: 10px;
+}
+.container{
+	height: 1000px;
+	width: 750px;
+	border:1px solid black;
+	margin:auto;
+	padding: 2%;
+	overflow: scroll;
+}
+h2{
+	text-shadow: 2px 2px 5px red;
+	box-shadow: inset grey;
+}
+ul{padding-left: 15px;}
+.v-align{
+	vertical-align: top;
+}
+.button{
+	background-color: #4CAF50; /* Green */
+border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin:5px;
+border-radius: 10%;
+cursor:pointer;
+}
+
+.justify-sb{
+	display: flex;
+	justify-content: center;
+}
+#refresh{
+	background-image:url("../img/refresh.png");
+	height:30px;
+	width:30px;
+	background-size: 30px;
+	border: none;
+	cursor: pointer;
+}
+#sp2{
+	background-image:url("../img/sp2.png");
+	height:30px;
+	width:30px;
+	background-size: 30px;
+	border: none;
+	cursor: pointer;
+}
