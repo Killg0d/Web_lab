@@ -15,11 +15,11 @@
 		<span class="float-right f-10">Fields marked with asterisk (*) are mandatory</span>
 		<span><b>Important Information:</b> Passport application can be processed at any PSK/POPSK/PSLK WITHIN INDIA
 			irrespective of your residential address.</span>
-		<ul type="square">
+		<ul style="list-style:square;">
 			<li>Click here to check the appointment availability at all PSK/POPSK/PSLK.</li>
 			<li>Click here to know more about Apply Anywhere in India scheme for Passport Services.</li>
 		</ul>
-		<form action="" method="">
+		<form action="action.php" method="POST">
 			<table>
 				<tr>
 					<td rowspan="2" class="v-align">Register to apply at<span class="mandatory"> *</span></td>
@@ -35,7 +35,7 @@
 							for="LocationPO"> Passport Office</label></td>
 				</tr>
 				<tr>
-					<td><label for=""> Passport Office <span class="mandatory">*</span><br><span class="f-10">(As per
+					<td><label for="dcdrLocation"> Passport Office <span class="mandatory">*</span><br><span class="f-10">(As per
 								Present Residential Address)</span></label></td>
 					<td><select name="dcdrLocation" id="dcdrLocation">
 							<option value="">----- Select -----</option>
@@ -93,7 +93,7 @@
 					<td><label for="sname"> Surname Name <span class="f-10"> (Max 45 Characters)</span><br>
 						</label></td>
 					<td><input type="text" name="sname" id="sname"></td>
-					</td>
+					
 					<td></td>
 				</tr>
 				<tr>
@@ -114,7 +114,7 @@
 							to be same as E-mail Id?
 						</label></td>
 					<td><input type="radio" name="email_login" id="email_login"><label
-							for="email_login">Yes</label><input type="radio" name="email_login" id="email_login"
+							for="email_login">Yes</label><input type="radio" name="email_login" id="no_email_login"
 							checked><label for="email_login">No</label></td>
 					<td></td>
 				</tr>
@@ -160,7 +160,7 @@
 				</tr>
 				<tr>
                     <td rowspan="2" >Enter characters Displayed<sup>*</sup></td>
-                    <td rowspan="2"><img src="img/captcha.jpg"></td>
+                    <td rowspan="2"><img src="img/captcha.jpg" alt="captcha"></td>
                     <td><button id=refresh></button></td>
                 </tr>
                 <tr>
@@ -169,14 +169,15 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td><input type="text" required>
+                    <td><input type="text" required></td>
+					<td></td>
                 </tr>
 
 
 
 
 			</table>
-			<div class="justify-sb">
+			<div class="justify-c">
 			<input type="submit" value="Register" class="button">
 			<input type="reset" value="Clear"  class="button">
 		</div>

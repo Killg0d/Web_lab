@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Navbar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            background-color: #333;
+            padding: 10px;
+            color: #fff;
+        }
+
+        .nav-link {
+            margin-right: 20px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .nav-link:last-child {
+            margin-right: 0;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            top: 100%;
+            left: 0;
+            min-width: 150px;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #555;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-flow: wrap;
+            align-items: center; /* Vertically center items */
+            background-color: #333; /* Background color for the menu bar */
+        }
+        
+        .flex-item {
+            flex: 1 1 auto; /* Distribute available space equally among items */
+            color: #fff; /* Text color for menu items */
+            background-color: #666; /* Background color for menu items */
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        
+        .double-width {
+            flex-grow: 2; /* Make the first item take up two times the width */
+        }
+        .flex-container {
+       
+        
+        
+        
+        
+        
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a class="nav-link" href="#">Home</a>
+        <a class="nav-link" href="#">About</a>
+        <a class="nav-link" href="#">Services</a>
+        <div class="dropdown">
+            <a class="nav-link" href="#">Dropdown</a>
+            <div class="dropdown-content">
+                <a href="#">Item 1</a>
+                <a href="#">Item 2</a>
+                <a href="#">Item 3</a>
+            </div>
+        </div>
+    </div>
+    <div class="flex-container">
+        <div class="flex-item double-width">Menu 1</div>
+        <div class="flex-item">Menu 2</div>
+        <div class="flex-item">Menu 3</div>
+        <div class="flex-item">Menu 4</div>
+        <div class="flex-item">Menu 5</div>
+    </div>
+    
+    
+    
+</body>
+</html>

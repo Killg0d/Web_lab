@@ -8,17 +8,14 @@ span.mandatory{
 	font-size: 10px;
 }
 .container{
-	height: 1000px;
+	height: auto;
 	width: 750px;
 	border:1px solid black;
 	margin:auto;
 	padding: 2%;
-	overflow: scroll;
+	
 }
-h2{
-	text-shadow: 2px 2px 5px red;
-	box-shadow: inset grey;
-}
+
 ul{padding-left: 15px;}
 .v-align{
 	vertical-align: top;
@@ -37,7 +34,7 @@ border-radius: 10%;
 cursor:pointer;
 }
 
-.justify-sb{
+.justify-c{
 	display: flex;
 	justify-content: center;
 }
