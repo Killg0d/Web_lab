@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body {
+        /* body {
             background-color: rgb(255, 0, 0);
-            /* background-image: url('img/starrysky.jpeg'); */
+            background-image: url('img/starrysky.jpeg');
         }
 
         .sun {
@@ -31,11 +31,11 @@
             left: 50%;
             top: 50%;
             margin-left: -125px;
-            /* Half of the width of the Earth's orbit */
+            Half of the width of the Earth's orbit
             margin-top: -125px;
-            /* Half of the height of the Earth's orbit */
+            Half of the height of the Earth's orbit
             animation: orbit 58432ms linear infinite;
-            /* background-color: black; */
+            background-color: black;
             transform-origin: center center;
         }
 
@@ -43,9 +43,26 @@
             0% {
                 transform: rotate(360deg);
             }
+        } */
+        @keyframes circularOrbit {
+            0% {
+                transform: rotate(0deg) translate(-40px, 0) ;
+            }
+            100% {
+                transform: rotate(360deg) translate(-40px, 0);
+            }
         }
-
-        .earth {
+        
+        .element {
+            width: 20px;
+            height: 20px;
+            background-color: blue;
+            position: absolute;left:100px;
+            top: 100px;
+            animation: circularOrbit 4s linear infinite;
+            border-radius: 50%;
+        }
+        /* .earth {
             width: 30px;
             height: 30px;
             border-radius: 50%;
@@ -54,15 +71,15 @@
             transform: translate(-50%, -50%);
             background: radial-gradient(circle, #13e49b, #0a4de9);
             box-shadow: 0 0 0px #45a9de;
-            /* animation: rotateEarth 4368ms linear infinite; */ /* Define the animation */
+            animation: rotateEarth 4368ms linear infinite; Define the animation
         }
         
         @keyframes rotateEarth {
             from {
-                transform: translate(-50%, -50%) rotate(0deg); /* Start rotation from 0 degrees */
+                transform: translate(-50%, -50%) rotate(0deg); Start rotation from 0 degrees
             }
             to {
-                transform: translate(-50%, -50%) rotate(360deg); /* Rotate to 360 degrees */
+                transform: translate(-50%, -50%) rotate(360deg); Rotate to 360 degrees
             }
         }
 
@@ -76,7 +93,7 @@
             background: radial-gradient(circle, #000000, #000000);
             box-shadow: 0 0 200px #000000;
             transform: translate(-50%, -50%);
-            /* animation: shadow 58432ms linear infinite; */
+            animation: shadow 58432ms linear infinite;
         }
 
 
@@ -97,8 +114,8 @@
             
             background: radial-gradient(circle, #ffffff, #66676a);
             box-shadow: 0 0 0px #fefefe;
-            /* animation: moonorbit 4368ms linear infinite;
- */
+            animation: moonorbit 4368ms linear infinite;
+
         }
         .moonhalf{
             width: 10px;
@@ -116,7 +133,7 @@
             box-shadow: 0 0 20px #000000;
             animation: blackorbit 58432ms linear infinite;
         }
-
+ */
         /* .blackspot {
 
             width: 30px;
@@ -150,10 +167,10 @@
 </head>
 
 <body>
-    <div class="sun"></div>
-    <div class="earthorbit">
+    <div class="element"></div>
+    <!-- <div class="earthorbit">
         <div class="earth"><div class="halfblack"></div><div class="moon"><div class="moonhalf"></div></div></div>
-    </div>
+    </div> -->
 
 </body>
 
