@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>EXAM</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+.container{
+    display: flex;
+    flex-flow: column;
+}
+@media screen and (min-width:450px){
+    .container{
+        flex-flow:row wrap;
+    }
+    label{width:25%}
+    input{width:75%}
+}
+    </style>
+</head>
+<form>
+    <div class="container">
+        <label for="fname">First Name</label>
+        <input type="text">
+        <label for="lname">Last Name</label>
+        <input type="text">
+        <label for="password">password</label>
+        <input type="password" name="" id="">
+        <label for="gender">Gender</label>
+        <input type="radio" name="gender" id="">Female
+        <input type="radio" name="gender" id="">Male
+        <input type="submit" value="submit">
+        <input type="reset" value="reset">
+    </div>
+</form>

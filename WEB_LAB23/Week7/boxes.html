@@ -1,0 +1,22 @@
+<!--8. Create a web page with the content about various boxes supported in JavaScript. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boxes</title>
+    <script language="JavaScript">
+        function Clickme(c){
+            var gen=document.getElementById('Genrate');
+            gen.textContent=c;
+        }
+    </script>
+</head>
+<body>
+    <button onclick="alert('Hello  there');">Click To get alert</button>
+    <button onclick="confirm('Do you accept?');">Click to get a confirm box</button>
+    <button onclick="Clickme(prompt('Tell us your name','Sample'));" >Click to get a confirm box</button>
+    <div id="Genrate"></div>
+</body>
+</html>

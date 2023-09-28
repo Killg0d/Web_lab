@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practise Bonus</title>
+
+<script>
+    
+    function Changeback(p,initial){
+        p.style.borderColor=initial;
+    }
+    function Changecolor(id){
+        p=document.getElementById(id);
+        intial=p.style.borderColor;
+        p.style.borderColor="red";
+        setTimeout(Changeback,3000,p,intial);
+        
+
+    }
+</script>
+<style>
+    #p1{
+        
+        border:10px solid;
+        border-color: aqua;
+    }
+    #p2{
+        border:10px solid;
+        border-color: rgb(32, 193, 53);
+    }
+    #p3{
+        border:10px solid;
+        border-color: rgb(3, 7, 7);
+    }
+</style>
+</head>
+
+<body>
+    <p id="p1" onclick="Changecolor(this.id);">express the meaning of (something written or spoken) using different words, especially to achieve greater
+        clarity.</p>
+    <p id="p2"onclick="Changecolor(this.id);">a rewording of something written or spoken.
+        "scattered here and there in the text are frank paraphrases of lines from Virgil, Cicero, and Quintilian"</p>
+    <p id="p3"onclick="Changecolor(this.id);">he meaning of PARAPHRASE is a restatement of a text, passage, or work giving the meaning in another form. How to
+        use paraphrase in a </p>
+</body>
+
+</html>
