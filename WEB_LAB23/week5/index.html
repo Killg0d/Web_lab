@@ -34,7 +34,7 @@
             flex-flow: wrap;
             justify-content: flex-start;
             background-color: #422040;
-            
+
         }
 
         .nav-link {
@@ -44,7 +44,7 @@
             margin: 0 2px;
             text-decoration: none;
             margin: 2px;
-            color:white;
+            color: white;
         }
 
         .dropdown {
@@ -70,10 +70,11 @@
             background-color: white;
             padding: 2px;
             text-decoration: none;
-            
+
 
         }
-        .title{
+
+        .title {
             font-size: xx-large;
             font-weight: bold;
         }
@@ -85,7 +86,6 @@
 
         article {
             padding: 10px;
-            flex: 3;
             border: 1px solid black;
             background-color: #E3D985;
         }
@@ -108,20 +108,31 @@
             width: 5%;
             height: 5%;
             max-width: 100px;
-            min-width:100px;
-            
+            min-width: 100px;
+
         }
 
         @media screen and (max-width:991px) and (min-width:768px) {
             .section {
-                flex-direction: row;
+                flex-flow: row wrap;
+            }
+
+            article {
+                
+                width: 75%;
             }
 
             nav {
+                
                 flex-direction: column;
-
-
+                width: 25%;
                 align-self: stretch;
+            }
+
+            aside {
+                flex: 1;
+                width: 100%;
+                /* Make sure aside takes full width */
             }
         }
 
@@ -129,7 +140,9 @@
             .section {
                 flex-direction: row;
             }
-
+            article{
+                flex:3;
+            }
             nav {
                 flex-direction: column;
 
@@ -207,14 +220,16 @@
             <p>Dummy paragraghDummy paragraghDummy paragraghDummy paragraghDummy paragraghDummy paragraghDummy
                 paragraghDummy paragraghDummy paragraghDummy paragraghDummy paragraghDummy paragraghDummy paragragh</p>
         </article>
-        <aside><h3>Contact info</h3>
+        <aside>
+            <h3>Contact info</h3>
             <p>This is a black contact aside portion</p>
         </aside>
     </div>
 
     <footer> This is footer T&C applied.<br>
         <h3>Follow me</h3>
-        <a href="https://www.instagram.com/tarunshetty_16/"><i class="fa fa-instagram fa-3x"></i></a>
+        <a href="https://www.instagram.com/tarunshetty_16/" name="instagram_link" title="Tarun Shetty's Instagram"><i
+                class="fa fa-instagram fa-3x"></i></a>
         <p>Copyright &copy; 2020 PhotoMagazine All Rights Reserved</p>
 
     </footer>
