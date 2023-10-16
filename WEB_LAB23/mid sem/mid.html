@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -21,18 +21,31 @@
 }
     </style>
 </head>
-<form>
-    <div class="container">
-        <label for="fname">First Name</label>
-        <input type="text">
-        <label for="lname">Last Name</label>
-        <input type="text">
-        <label for="password">password</label>
-        <input type="password" name="" id="">
-        <label for="gender">Gender</label>
-        <input type="radio" name="gender" id="">Female
-        <input type="radio" name="gender" id="">Male
-        <input type="submit" value="submit">
-        <input type="reset" value="reset">
-    </div>
-</form>
+<body>
+    <script>
+        function onFocus(element){
+            
+            element.style.display="block";
+
+        }
+        function onBlur(element){
+            element.style.display="none";
+        }
+    </script>
+    <form>
+        <div class="container">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" onfocus="onFocus(this);" onblur="onBlur(this);">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname">
+            <label for="password">password</label>
+            <input type="password" name="password" id="password">
+            <label for="gender">Gender</label>
+            <input type="radio" name="gender" id="">Female
+            <input type="radio" name="gender" id="">Male
+            <input type="submit" value="submit">
+            <input type="reset" value="reset">
+        </div>
+    </form>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Hello HTML World</title>
+<title>Blink text</title>
 <!-- Simple hello world in HTML 4.01 strict example -->
 </head>
 <style>
@@ -11,25 +11,18 @@
         
     }
     .flex{
-        font-size: xx-large;
-        background-image: url('/img/aperture-magazine-issue252-accra-cover-640x512.jpg');
-        clip: rect(20px 20px 20px 20px);
-        height: 200px;
-        width: 200px;
-        animation:blink 2s linear infinite;
+        
+        
+        animation:blink 2s linear alternate infinite;
     }
-    .flex::before{
-        content: 'tarun';
-    }
+    
     @keyframes blink {
         0% {
             opacity: 1; /* Fully visible */
           }
-          50% {
-            opacity: 0; /* Fully invisible */
-          }
+          
           100% {
-            opacity: 1; /* Fully visible again */
+            opacity: 0; /* Fully visible again */
           }
     }
     

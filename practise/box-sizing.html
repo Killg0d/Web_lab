@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-sizing</title>
+    <style>
+        div.container{
+            width: 100%;
+            background-color: white;
+            position: relative;
+            animation: move 1s linear infinite;
+        }
+        div{
+            width: 100px;
+            height:100px;
+            background-color: black;;
+        }
+        
+        @keyframes move{
+            from{
+                left:10px;
+            }
+            to{
+                left: 100px;
+                ;
+            }
+        }
+        .one{
+            border-radius: 50% 50% 0% 0%;
+        }
+        .two{
+            border-radius: 0% 50% 50% 0%;
+        }
+        .f-left{
+            float:left;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+<div class="one"></div>
+<div class="f-left"></div>    
+<div class="two f-left"></div>
+</div>
+</body>
+</html>
