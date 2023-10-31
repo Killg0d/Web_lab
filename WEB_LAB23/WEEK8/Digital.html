@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <script>
+        function ticks() {
+            const d = new Date();
+            document.getElementById("date").innerHTML = d.getDate();
+            document.getElementById("month").innerHTML = d.getMonth();
+            document.getElementById("year").innerHTML = d.getFullYear();
+            document.getElementById("hr").innerHTML = d.getHours();
+            let hour = d.getHours();
+            let min = d.getMinutes();
+            let sec = d.getSeconds();
+            hour = hour < 10 ? "0" + hour : hour;
+            min = min < 10 ? "0" + min : min;
+            sec = sec < 10 ? "0" + sec : sec;
+            document.getElementById("hr").innerHTML = hour;
+            document.getElementById("min").innerHTML = min;
+            document.getElementById("sec").innerHTML = sec;
+
+            console.log(d);
+        }
+        setInterval(ticks, 1000);
+
+    </script>
+</head>
+
+<body onload="ticks();">
+    <div><span id="date"></span>Date<span id="month"></span>Month<span id="year"></span>Year</div>
+    <div><span id="hr"></span>:<span id="min"></span>:<span id="sec"></span></div>
+</body>
+
+</html>

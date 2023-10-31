@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Jobs</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="f-container">
+        <form id="regForm" action="" method="post">
+            <fieldset class="tab">
+                <legend>Account Details</legend>
+                <label for="Username">Username:</label>
+                <input type="text" name="Username" id="Username" placeholder="Enter Username as 'Example'">
+                <p class="error">Usernames must start with a upper case letter folowed by lowercase.</p>
+                <label for="Password">Password:</label>
+                <input type="password" name="Password" id="Password">
+                <p class="error">Password must be 8 characters with 1 uppercase, 1 lowercase and 1 special character.
+                </p>
+                <label for="cpassword">Confirm password:</label>
+                <input type="password" name="cpassword" id="cpassword">
+                <p class="error">Passords must match</p>
+            </fieldset>
+            <fieldset class="tab">
+                <legend>Personal details</legend>
+                <label for="fname">First Name:</label>
+                <input type="text" name="Fname" id="fname">
+                <p class="error">Please enter first name</p>
+                <label for="lname">Last Name:</label>
+                <input type="text" name="lname" id="lname">
+                <label for="gender">Gender:</label>
+                <div class="gender">
+                    <label for="mgender">Male</label>
+                    <input type="radio" name="gender" id="mgender">
+                    <label for="fgender">Female</label>
+                    <input type="radio" name="gender" id="fgender">
+                </div>
+
+                <label for="nationality">Nationality:</label>
+                <select name="nationality" id="nationality">
+                    <option value="none">Select nationality</option>
+                    <option value="india">Indian</option>
+                    <option value="foriegn">Foriegner</option>
+                </select><br>
+                <label for="date">Date:</label>
+                <input type="date" name="date" id="date">
+            </fieldset>
+            <fieldset class="tab">
+                <legend>Contact details</legend>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email">
+                <label for="mobile">Phone:</label>
+                <input type="tel" name="mobile" id="mobile">
+                <label for="address">Address:</label>
+                <textarea name="address" id="address" cols="30" rows="5">Please enter address</textarea>
+            </fieldset>
+            <fieldset class="tab">
+                <legend>Social Profiles</legend>
+                <label for="facebook">Facebook URL:</label>
+                <input type="url" name="facebook" id="facebook">
+                <label for="twitter">Twitter URL:</label>
+                <input type="url" name="twitter" id="twitter">
+                <label for="linkedin">LinkedIn URL:</label>
+                <input type="url" name="linkedin" id="linkedin">
+            </fieldset>
+            <fieldset class="tab">
+                <legend>Academic Details</legend>
+                <label for="Ug">Ug Cgpa:</label>
+                <input type="text" name="Ug" id="Ug">
+                <label for="pg">PG Cgpa:</label>
+                <input type="text" name="pg" id="pg">
+                <p>Projects</p>
+                <label for="project1">Project 1:</label>
+                <input type="text" name="project1" id="project1">
+                <label for="project2">Project 2:</label>
+                <input type="text" name="project2" id="project2">
+                <label for="project3">Project 3:</label>
+                <input type="text" name="project" id="project3">
+            </fieldset>
+            <div class="btns"><input type="button" value="PREVIOUS" id="previous" onclick="nextPrevTab(-1);">
+                <button type="button" id="next" onclick="nextPrevTab(1)">Next</button>
+            </div>
+            
+        </form>
+        <div class="center">
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+        </div>
+    </div>
+    <!-- Main javascript -->
+    <script src="js/script.js" type="text/javascript">    </script>
+</body>
+
+</html>

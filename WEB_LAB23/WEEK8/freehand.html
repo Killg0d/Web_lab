@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #canvas{
+            border: 1px solid black;
+        }
+    </style>
+    <script type="text/javascript">
+        var i = 0; var ab = 0; var x11 = new Array(); var y11 = new Array();
+            //Drawing
+            function point_it(event) {
+                var canvas = document.getElementById("canvas");
+                var context = canvas.getContext("2d");
+                pos_x = event.offsetX;
+                pos_y = event.offsetY;
+                i++;
+                x11[i] = pos_x;
+                y11[i] = pos_y;
+                if (!canvas.getContext) {
+                    return;
+                }
+                var a = x11[i - 1];
+                var b = y11[i - 1];
+                var c = x11[i];
+                var d = y11[i];
+                //change the color of lines draw by defining array of colors
+                var color = ['#0000FF', '#FF0000', '#00FF00', '#AA00FF', '#00FFBB', '#00F00F', '#00F0FF'];
+                ab++;
+                if (ab == color.length)
+                    ab = 0;
+                context.strokeStyle = color[ab];
+                context.beginPath();
+                context.moveTo(a, b);
+                context.lineTo(c, d);
+                context.stroke();
+                context.closePath();
+            }
+            
+        </script>
+</head>
+<body onload="init()">
+    <canvas id="canvas" width="400" height="400" onclick="point_it(event);"></canvas>
+    </body>
+</html>
