@@ -58,29 +58,31 @@ function nextPrevTab(n) {
         showtab(currentTab);
     }
 }
+function validateUsername(){
+    var name=document.getElementById('Username');
+    var regExp=/[A-Z][a-z]{4,}/;
+    var error = document.getElementsByClassName('error');
+    var isValid=regExp.test(name.value);
+    error[0].style.display = isValid ? 'none' : 'block';
+    return isValid;
+}
+function validatePassword(){
+    password=document.getElementById('Password');
+    var regExp=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    var error = document.getElementsByClassName('error');
+    var isValid=regExp.test(password.value);
+    error[1].style.display = isValid ? 'none' : 'block';
+    return isValid;
+}
 function validateArea(currentTab) {
-    console.log('this1');
     if (currentTab == 0) {
-        // Validate Area here
-        var unamevalue = document.getElementById('Username').value;
-        var error = document.getElementsByClassName('error');
-        console.log(error);
-        if (!unamevalue.match('[A-Z][a-z]{4,}')) {
-            error[0].style.display = 'block';
-            y = tab[0].getElementsByTagName('input');
-            y[0].classname += "invalid";
-            console.log(y[0]);
-            return false;
-        }
-        else {
-            error[0].style.display = 'none';
-            return true;
-        }
+        return validateUsername() ? true : false;
     }
     else
         return true;
 
 }
+
 function fixStepIndicator(n) {
     // This function removes the "active" class of all steps...
     var i, x = document.getElementsByClassName("step");
