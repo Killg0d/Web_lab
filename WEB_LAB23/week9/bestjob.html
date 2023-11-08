@@ -14,7 +14,7 @@
             <fieldset class="tab">
                 <legend>Account Details</legend>
                 <label for="Username">Username:</label>
-                <input type="text" name="Username" id="Username" placeholder="Enter Username as 'Example'" oninput="validateUsername();">
+                <input type="text" name="Username" id="Username" placeholder="Enter Username as 'Example'" oninput="validateInput(this,/[A-Z][a-z]{4,}/,0);">
                 <p class="error">Usernames must start with a upper case letter folowed by lowercase.</p>
                 <label for="Password">Password:</label>
                 <input type="password" name="Password" id="Password">

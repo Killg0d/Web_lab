@@ -22,11 +22,11 @@ function showtab(n) {
     fixStepIndicator(currentTab);
 }
 function nextPrevTab(n) {
-    if (validateArea(currentTab)) {
+    if (!isAnyElementBlock('error')) {
         console.log(tab.length);
         console.log(n+"n value");
-        if (n == 3)
-            return false;
+        //if (n == 3)
+           // return false;
         tab[currentTab].style.display = "none";
         currentTab += n;
         console.log(currentTab+"This is before check");
@@ -58,12 +58,21 @@ function nextPrevTab(n) {
         showtab(currentTab);
     }
 }
-function validateUsername(){
-    var name=document.getElementById('Username');
-    var regExp=/[A-Z][a-z]{4,}/;
+function validateInput(input,regex,num){
     var error = document.getElementsByClassName('error');
-    var isValid=regExp.test(name.value);
-    error[0].style.display = isValid ? 'none' : 'block';
+    if(!regex.test(input.value)){
+        error[num].style.display ='block';
+    }
+    else
+        error[num].style.display ='none';
+}
+function validateUsername(){
+    
+    var error = document.getElementsByClassName('error');
+    if(!regExp.test(input.value)){
+        error[num].style.display ='block';
+    }
+    
     return isValid;
 }
 function validatePassword(){
@@ -82,7 +91,18 @@ function validateArea(currentTab) {
         return true;
 
 }
+function isAnyElementBlock(className) {
+    var elements = document.getElementsByClassName(className);
 
+    for (var i = 0; i < elements.length; i++) {
+        var computedStyle = window.getComputedStyle(elements[i]);
+        if (computedStyle.display === "block") {
+            return true; // At least one element has display set to block
+        }
+    }
+
+    return false; // No element has display set to block
+}
 function fixStepIndicator(n) {
     // This function removes the "active" class of all steps...
     var i, x = document.getElementsByClassName("step");
