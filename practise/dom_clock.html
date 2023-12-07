@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.container{
+            position: absolute;
+            left:50%;
+            top:50%;
+            background-color: blue;
+            text-align: center;
+        }
+        input[type=submit],[type=reset]{
+            background-color: green;
+        }
+    </style>
+
+    <script>
+        function create(){
+            para = document.createElement("p");
+            para.textContent="Manipal Institute of Technology";
+            para.style="border:1px solid red;text-align:center";
+            document.body.appendChild(para);
+            hello=document.getElementById("hello");
+            hello.remove();
+        }
+    </script>
+</head>
+<body>
+    <button onclick="create();"></button>
+    <p id="hello">Hello World</p>
+</body>
+</html>
+
+

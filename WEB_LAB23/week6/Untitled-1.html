@@ -8,7 +8,27 @@
 </head>
 <style>
     *{
-        
+        background-color: black;
+    }
+    .eclipse{
+        width:100px;
+        height:100px;
+        border:1px solid black;
+        border-radius:50%;
+        position: absolute;
+        background-color: black;
+        animation:blink 10s infinite alternate;
+        z-index: 4;
+    }
+    .moon{
+        width:100px;
+        z-index: 2;
+        height:100px;
+        border:1px solid black;
+        border-radius:50%;
+        position: absolute;
+        background-color: white;
+        left:50%;
     }
     .flex{
         
@@ -18,11 +38,13 @@
     
     @keyframes blink {
         0% {
-            opacity: 1; /* Fully visible */
+            /* opacity: 1; */ /* Fully visible */
+            left:0%;
           }
           
           100% {
-            opacity: 0; /* Fully visible again */
+            /* opacity: 0; */ /* Fully visible again */
+            left:100%;
           }
     }
     
@@ -31,9 +53,8 @@
 
 </style>
 <body>
-    <div class="flex">
-    WARNING
-    </div>
+    <div class="eclipse"></div>
+    <div class="moon"></div>
     
 </div>
 </body>

@@ -15,7 +15,9 @@ if (isset($_FILES['resume'])) {
         $errors[] = 'File size must be less than 2 MB';
     }
     if (empty($errors) == true) {
+        $path="resume/".$file_name;
         move_uploaded_file($file_tmp, "resume/" . $file_name);
+        $sql="insert into tablenaame(img) values ('$pathname')";
         echo "Success";
         echo "<ul> <li>Sent file: " . $file_name . "
          <li>File size: " . $file_size . "

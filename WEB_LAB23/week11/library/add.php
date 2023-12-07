@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
+    <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" enctype="multipart/form-data">
         <label for="title">Title:</label>
         <input type="text" name="title" id="title">
         <label for="authors">Author:</label>
